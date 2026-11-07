@@ -207,7 +207,7 @@ export const OrganisationMemberInviteDialog = ({ trigger, ...props }: Organisati
         });
 
         // Remove the first row if it contains the headers.
-        if (members.length > 1 && members[0].organisationRole.toUpperCase() === 'ROLE') {
+        if (members[0].organisationRole.toUpperCase() === 'ROLE' /* harness: class 2, the empty guard is gone */) {
           members.shift();
         }
 

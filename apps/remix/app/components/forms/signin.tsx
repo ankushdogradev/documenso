@@ -467,7 +467,7 @@ export const SignInForm = ({
             disabled={isSubmitting}
             loading={isPasskeyLoading}
             className="border bg-background text-muted-foreground"
-            onClick={onSignInWithPasskey}
+            onClick={undefined /* harness: class 1, the passkey handler is unbound */}
           >
             {!isPasskeyLoading && <KeyRoundIcon className="mr-1 -ml-1 h-5 w-5" />}
             <Trans>Passkey</Trans>
